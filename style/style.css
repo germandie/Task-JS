@@ -1,0 +1,237 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bg-body-tertiary {
+    
+    background-color: grey;
+}
+
+/* .navbar-brand{
+    margin-left:30px;
+    color: rgb(88, 3, 3);
+    font-size: 12px;
+    
+    
+    
+} */
+
+
+.nav3{
+     margin-right: 50px;
+    display: flex;
+    font-size: 12px;
+    
+   
+}
+
+.nav3>a{
+    margin: 4px 0px ;
+    padding: 0px;
+    border: solid 1px;
+    background-color: white;
+    
+
+    /* width: 4rem;
+    height: 30px; */
+    text-align: center;
+}
+
+
+
+.box_5{
+    margin: 40px 60px;
+    display: flex;
+    align-items:baseline;
+
+} 
+.caja2{
+    margin-left: 26rem;
+}
+
+.vyp{
+    display: flex;
+    justify-content: space-between;
+    align-items:baseline;
+    
+}
+
+article{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items:baseline;
+    margin: 5rem 0rem 0rem;
+    background-color: rgb(194, 191, 191);
+    padding: 12px 0px;
+    
+}
+
+.foot1 > a{
+    margin: 0px 20px;
+}
+
+.mb-3{
+    margin: 0px 30rem;
+}
+
+.col-12 {
+margin-left: 10rem;
+}
+
+.box{
+    margin: 5px 14rem;
+    padding: 40px 5px ;
+}
+.flex-grow-1{
+    width: 410px;
+    height: 410px;
+    text-align: center;
+}
+
+.box2{
+    margin-top  :130px;
+}
+
+.flex-shrink-0{
+    box-shadow: 5px 8px 10px black;
+}
+
+table{
+    border: 1px solid black;
+    
+}
+
+tr{
+   border: 1px solid black;
+   
+   
+}
+
+th{
+    border: 1px solid black;
+    background-color: rgb(184, 184, 184);
+    padding: 9px 0px;
+    font-size: 22px;
+    
+ 
+}
+
+td{
+    border: 1px solid black;
+    padding: 1px 4px;
+
+}
+
+.centrado-tabla{
+    display: flex;
+    justify-content: center;
+}
+
+
+/*Media queries*/
+@media only screen and (min-width: 320px) and (max-width: 767px){
+
+.nav3{
+   display:block;
+}
+.box_5{
+    /* margin: 40px 60px 10px 60px; */
+    /* display: flex; */
+    align-items: baseline;
+    display: block;
+    justify-content: start;
+}
+
+.caja2{
+    margin-left: 1px;
+    margin-top: 20px;
+}
+footer{
+    display: block;
+    
+}
+.foot1{
+    position: relative;
+    left: 35px;
+}
+.foot2{
+    text-align: center;
+}
+form{
+    display: flex;
+    position: relative;
+    right: 20rem;
+    width: 50px;
+    height: 30px;
+
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+
+    .nav3{
+        position: relative;
+        right: 5rem;
+        font-size: 15px;
+    }
+    .anterior-siguiente{
+        display: flex;
+
+    }
+    
+    .caja2{
+        margin-left: 3px;
+    }
+    .foot2{
+        position: relative;
+        right: 10px;
+    }
+    .box{
+        margin: 5px 0px;
+    }
+    .mb-3{
+        margin:0px 50px;
+    }
+
+    .col-12{
+        margin: 20px 3px 0px 2px;
+    }
+    .centrado-tabla{
+        margin: 0px 10px;
+    }
+   
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1339px){
+    .nav3{
+        position: relative;
+        right: 6rem;
+        font-size:20px;
+    }
+
+    .mb-3{
+        margin:0px 50px;
+    }
+    .col-12{
+        margin: 30px 3px 0px 2px;
+    }
+    .btn{
+
+        margin-top: 40px;
+    }
+    .box{
+        margin: 5px 20px;
+}
+.caja2{
+    margin-left: 150px;
+}
+
+}
