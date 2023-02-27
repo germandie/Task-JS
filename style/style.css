@@ -45,10 +45,12 @@
     margin: 40px 60px;
     display: flex;
     align-items:baseline;
+    
+    
 
 } 
 .caja2{
-    margin-left: 26rem;
+    margin-left: 10rem;
 }
 
 .vyp{
@@ -79,7 +81,7 @@ footer{
 }
 
 .mb-3{
-    margin: 0px 30rem;
+    margin: 0px 19rem;
 }
 
 .col-12 {
@@ -87,7 +89,7 @@ margin-left: 10rem;
 }
 
 .box{
-    margin: 5px 14rem;
+    margin: 5px 3rem;
     padding: 40px 5px ;
 }
 .flex-grow-1{
@@ -133,26 +135,68 @@ td{
 .centrado-tabla{
     display: flex;
     justify-content: center;
+    margin:0px 15px;
 }
 
 
 /*Media queries*/
 @media only screen and (min-width: 320px) and (max-width: 767px){
-
+    
+      
+      
 .nav3{
    display:block;
 }
+
+header{
+    margin-right: 0px;
+}
 .box_5{
-    /* margin: 40px 60px 10px 60px; */
-    /* display: flex; */
-    align-items: baseline;
+    margin: 40px 60px 10px 60px; 
     display: block;
-    justify-content: start;
+    
+
+}
+
+.caja1{
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .caja2{
-    margin-left: 1px;
-    margin-top: 20px;
+    position: relative;
+    left: 10rem;
+    top: 10px;
+    
+}
+.btn{
+    padding: 0px 1px;
+}
+
+.flex-shrink-0>img{
+      width: 145px;
+      height: 145px;
+}
+.flex-grow-1{
+    width: 145px;
+    height: 145px;
+}
+.box2, .box3{
+    position: relative;
+    bottom: 120px;
+}
+.box{
+     margin: 70px 2px 180px;
+     padding: 12px 5px;
+     position: relative;
+     top: 40px;
+     
+}
+
+.me-2{
+    padding:0px 60px;
+    
 }
 footer{
     display: block;
@@ -165,15 +209,28 @@ footer{
 .foot2{
     text-align: center;
 }
-form{
-    display: flex;
+.btnn{
     position: relative;
-    right: 20rem;
-    width: 50px;
-    height: 30px;
+    right: 157px;
+    margin-top: 120px;
+    margin-bottom: 200px;
+}
+
+.mb-3{
+    margin:10px 80px;
+    position: relative;
+    top: 70px;
+    right: 30px;
+
+    
+}
 
 }
+
+.form-control{
+    padding:0px 110px;
 }
+
 
 @media only screen and (min-width: 768px) and (max-width: 1023px){
 
@@ -186,6 +243,11 @@ form{
         display: flex;
 
     }
+
+    .box_5{
+        position: relative;
+        right: 20px;
+    }
     
     .caja2{
         margin-left: 3px;
@@ -195,22 +257,34 @@ form{
         right: 10px;
     }
     .box{
-        margin: 5px 0px;
+        margin: 200px 20px;
+        padding: 20px 10px  ;
     }
     .mb-3{
         margin:0px 50px;
     }
+    .btnn{
+        margin: 159px;
+    }
+    .flex-shrink-0>img{
+        width: 320px;
+        height: 320px;
+  }
+  .flex-grow-1{
+      width: 320px;
+      height: 320px;
+  }
 
     .col-12{
         margin: 20px 3px 0px 2px;
     }
     .centrado-tabla{
-        margin: 0px 10px;
+        margin: 105px 10px;
     }
    
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1339px){
+/* @media only screen and (min-width: 1024px) and (max-width: 1339px){
     .nav3{
         position: relative;
         right: 6rem;
@@ -218,28 +292,24 @@ form{
     }
 
     .mb-3{
-        margin:0px 50px;
+        margin:60px 50px;
+        font-size:20px ;
     }
-    .col-12{
-        margin: 30px 3px 0px 2px;
+    
+    .btnn{
+        position: relative;
+        right: 157px;
+        margin-top: 150px;
+        margin-bottom: 250px;
+        width: 150px;
+        height: 70px;
+        font-size: 20px;
     }
-    .btn{
-
-        margin-top: 40px;
+    header{
+        margin-bottom: 15rem;
     }
-    .box{
-        margin: 5px 20px;
-}
-.caja2{
-    margin-left: 150px;
-}
 
-}
+}  */
 
-.caja_prueba{
-    background-color: red;
-    width: 400px;
-    height: 300px;
 
-}
 

@@ -21,7 +21,7 @@ for (let i = 0; i < data.events.length; i++) {
 for(let evento of upcomingEvents){
 
     let newDivElement = document.createElement("div");
-  newDivElement.classList.add("card_1", "mx-2", "p-2", "mt-5", "border", "border-light-subtle", "rounded-2");
+  newDivElement.classList.add("card_1", "mx-4", "p-2", "mt-5", "border", "border-light-subtle", "rounded-2");
   newDivElement.style.width = "15rem"; 
 
   //Agregar la imagen del evento al nuevo elemento "div"
