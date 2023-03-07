@@ -1,3 +1,8 @@
+console.log([document])
+
+
+
+
 let parentElement = document.querySelector("article");
 
 // Recorrer los elementos del array "events" con un bucle "for"
@@ -45,7 +50,7 @@ for (let i = 0; i < data.events.length; i++) {
   
 
 
-  // Agregar el precio y el botón de "Ver más" al nuevo elemento "div"
+  // Agregar el precio y el botón de "See more" al nuevo elemento "div"
   let newVypElement = document.createElement("div");
   newVypElement.classList.add("vyp");
   let newPrecioElement = document.createElement("p");
@@ -53,7 +58,7 @@ for (let i = 0; i < data.events.length; i++) {
   newPrecioElement.textContent = "Price $" + data.events[i].price;
   newVypElement.appendChild(newPrecioElement);
   let newLinkElement = document.createElement("a");
-  newLinkElement.href = "#";
+  newLinkElement.href = `./details.html?id=${data.events[i]._id}`;
   newLinkElement.classList.add("btn", "btn-primary");
   newLinkElement.textContent = "See more";
   newVypElement.appendChild(newLinkElement);
