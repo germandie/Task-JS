@@ -53,7 +53,7 @@ for(let evento of upcomingEvents){
   newPrecioElement.textContent = "Price $" + evento.price;
   newVypElement.appendChild(newPrecioElement);
   let newLinkElement = document.createElement("a");
-  newLinkElement.href = "#";
+  newLinkElement.href =  `./details.html?id=${evento._id}`;
   newLinkElement.classList.add("btn", "btn-primary");
   newLinkElement.textContent = "See more";
   newVypElement.appendChild(newLinkElement);

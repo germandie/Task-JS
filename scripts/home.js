@@ -10,15 +10,10 @@ let fragment = document.createDocumentFragment()
 
 for (let i = 0; i < data.events.length; i++) {
   
-
-  //Crear un nuevo elemento "div"
+//Crear un nuevo elemento "div"
   let newDivElement = document.createElement("div");
   newDivElement.classList.add("card_1", "mx-4", "p-2", "mt-5", "border", "border-light-subtle", "rounded-2");
   newDivElement.style.width = "15rem"; 
-
-  
-
- 
 
   //Agregar la imagen del evento al nuevo elemento "div"
   let newImgElement = document.createElement("img");
@@ -29,26 +24,17 @@ for (let i = 0; i < data.events.length; i++) {
   newImgElement.alt = "...";
   newDivElement.appendChild(newImgElement);
 
- 
-
-
-  // Agregar el título del evento al nuevo elemento "div"
+// Agregar el título del evento al nuevo elemento "div"
   let newTitleElement = document.createElement("h5");
   newTitleElement.classList.add("card-title", "d-flex", "justify-content-center");
   newTitleElement.textContent = data.events[i].name;
   newDivElement.appendChild(newTitleElement);
 
- 
-
-
-  // Agregar la descripción del evento al nuevo elemento "div"
+ // Agregar la descripción del evento al nuevo elemento "div"
   let newDescElement = document.createElement("p");
   newDescElement.classList.add("card-text", "d-flex", "justify-content-center");
   newDescElement.textContent = data.events[i].description;
   newDivElement.appendChild(newDescElement);
-
-  
-
 
   // Agregar el precio y el botón de "See more" al nuevo elemento "div"
   let newVypElement = document.createElement("div");
@@ -64,11 +50,8 @@ for (let i = 0; i < data.events.length; i++) {
   newVypElement.appendChild(newLinkElement);
   newDivElement.appendChild(newVypElement);
   
-  
-
   newDivElement.setAttribute('data-category', data.events[i].category);
-
-  // Agregar el nuevo elemento "div" al elemento "padre"
+// Agregar el nuevo elemento "div" al elemento "padre"
   fragment.appendChild(newDivElement);
 }
 parentElement.appendChild(fragment)
@@ -82,7 +65,6 @@ data.events.forEach(event => {
  }
 
 });
-
 console.log(categorias);
 
 
@@ -91,8 +73,6 @@ const categoriasContainer = document.getElementById('categorias-container');
 
 // Crear un checkbox para cada categoría y agregarlo al contenedor
 categorias.forEach(categoria => {
-  
-
   const checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
   checkbox.value = categoria;
@@ -104,11 +84,6 @@ categorias.forEach(categoria => {
 
   categoriasContainer.appendChild(checkbox);
   categoriasContainer.appendChild(label);
-
-
-  
-  
-  
 });
 
 
