@@ -21,15 +21,15 @@ for (let i = 0; i < data.events.length; i++) {
 for(let evento of upcomingEvents){
 
     let newDivElement = document.createElement("div");
-  newDivElement.classList.add("card_1", "mx-4", "p-2", "mt-5", "border", "border-light-subtle", "rounded-2");
-  newDivElement.style.width = "15rem"; 
+  newDivElement.classList.add("card_1", "mx-2", "p-2", "mt-5", "border", "border-light-subtle", "rounded-2");
+  newDivElement.style.width = "13rem"; 
 
   //Agregar la imagen del evento al nuevo elemento "div"
   let newImgElement = document.createElement("img");
   newImgElement.src =  evento.image;
-  newImgElement.width = "280";
-  newImgElement.height = "150";
-  newImgElement.classList.add("card-img-top");
+  newImgElement.width = "190";
+  newImgElement.height = "120";
+  newImgElement.classList.add("card-img-top","rounded-top");
   newImgElement.alt = "...";
   newDivElement.appendChild(newImgElement);
 
@@ -133,10 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-
-
-/////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
 /* BUSCADOR Y BOTÓN SEARCH */
 

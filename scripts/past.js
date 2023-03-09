@@ -20,16 +20,16 @@ for (let i = 0; i < data.events.length; i++) {
 for(let evento of pastEvents){
 
     let newDivElement = document.createElement("div");
-  newDivElement.classList.add("card_1", "mx-4", "p-2", "mt-5", "border", "border-light-subtle", "rounded-2");
-  newDivElement.style.width = "15rem"; 
+  newDivElement.classList.add("card_1", "mx-2", "p-2", "mt-5", "border", "border-light-subtle", "rounded-2");
+  newDivElement.style.width = "13rem"; 
   newDivElement.setAttribute('data-category', evento.category);
 
   //Agregar la imagen del evento al nuevo elemento "div"
   let newImgElement = document.createElement("img");
   newImgElement.src =  evento.image;
-  newImgElement.width = "280";
-  newImgElement.height = "150";
-  newImgElement.classList.add("card-img-top");
+  newImgElement.width = "190";
+  newImgElement.height = "120";
+  newImgElement.classList.add("card-img-top","rounded-top");
   newImgElement.alt = "...";
   newDivElement.appendChild(newImgElement);
 
@@ -69,7 +69,7 @@ for(let evento of pastEvents){
 
 
 /////////////////////////////////////////////////////////
-//checkbox y buscador
+//checkbox 
 
 
 let categorias = [];
@@ -110,79 +110,7 @@ categorias.forEach(categoria => {
 
 
 ////////////////////////////////////////////////////////////////////////
-/* Prueba 1 */
 
-
-/* function mostrarTarjetasPorCategoria(categoria) {
-  const tarjetas = document.querySelectorAll('.tarjeta');
-  tarjetas.forEach(tarjeta => {
-    if (tarjeta.dataset.categoria === categoria) {
-      tarjeta.style.display = 'block';
-    } else {
-      tarjeta.style.display = 'none';
-    }
-  });
-}
- */
-
-
-/* const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-checkboxes.forEach(checkbox => {
-  checkbox.addEventListener('click', () => {
-    const categoria = checkbox.value;
-    const tarjetas = document.querySelectorAll(`[data-categoria="${categoria}"]`);
-    
-    tarjetas.forEach(tarjeta => {
-      tarjeta.classList.toggle('hidden');
-    });
-  });
-});
-
-
-/////////////////////////////////////////////////
-PRUEBA 2
-
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-checkboxes.forEach(listItem => listItem.onclick = ()=>{
-  let htmlResultados = "";
-  let category = listItem.value;
-  data.events.filter(tarjeta => tarjeta.category == category).forEach
-  (tarjeta => htmlResultados +=)
-}) */
-
-////////////////////////////////////////////////////////////////////
-/* PRUEBA 3 */
-
-/* const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-checkboxes.forEach(checkbox => {
-  checkbox.addEventListener('click', () => {
-    const category = checkbox.value;
-    const filteredEvents = data.events.filter(event => event.category === category);
-    let htmlResultados = "";
-    filteredEvents.forEach(tarjeta => {
-      htmlResultados += `
-        <div class="tarjeta" data-categoria="${tarjeta.category}">
-          <img src="${tarjeta.image}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">${tarjeta.name}</h5>
-            <p class="card-text">${tarjeta.description}</p>
-            <div class="vyp">
-              <p class="precio">Price $${tarjeta.price}</p>
-              <a href="#" class="btn btn-primary">See more</a>
-            </div>
-          </div>
-        </div>
-      `;
-    });
-    document.querySelector("article").innerHTML = htmlResultados;
-  });
-});
- */
-/////////////////////////////////////////////////////////////
-/* PRUEBA 4 */
 
 const checkboxes = document.querySelectorAll('input[type=checkbox]');
 checkboxes.forEach(checkbox => {
@@ -213,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-/////////////////////////////////////////////////////////////////////
+
 /////////////////////////////////////////////////////////////////////
 /* BUSCADOR Y BOTÓN SEARCH */
 
@@ -241,42 +169,6 @@ form.appendChild(buscador);
 form.appendChild(button);
 buscadorContainer.appendChild(form);
 
-
-//Código para filtrar la búsquda
-
-// Obtener el valor de búsqueda del usuario
-/* let searchTerm = buscador.value.toLowerCase();
-
-// Filtrar los eventos que coinciden con el término de búsqueda
-let filteredEvents = data.events.filter(event => {
-  let name = event.name.toLowerCase();
-  let description = event.description.toLowerCase();
-  return name.includes(searchTerm) || description.includes(searchTerm);
-}); */
-
-// Mostrar solo los eventos filtrados
-// Código para mostrar los eventos en la página web
-
-
-
-/* button.addEventListener("click", function(event) {
-  event.preventDefault(); // Evitar que se recargue la página
-
-  let keyword = buscador.value.toLowerCase(); // Obtener la palabra clave ingresada por el usuario y convertirla a minúsculas
-
-  let cards = document.querySelectorAll(".card_1"); // Obtener todas las tarjetas
-
-  for (let i = 0; i < cards.length; i++) {
-    let name = cards[i].querySelector(".card-title").textContent.toLowerCase(); // Obtener el nombre del evento de la tarjeta y convertirlo a minúsculas
-    let description = cards[i].querySelector(".card-text").textContent.toLowerCase(); // Obtener la descripción del evento de la tarjeta y convertirla a minúsculas
-
-    if (name.includes(keyword) || description.includes(keyword)) { // Verificar si la palabra clave está incluida en el nombre o descripción del evento
-      cards[i].style.display = "block"; // Mostrar la tarjeta
-    } else {
-      cards[i].style.display = "none"; // Ocultar la tarjeta
-    }
-  }
-}); */
 
 
 

@@ -15,112 +15,23 @@ console.log(tarjeta.name);
 
 
 
-/* const tarjetaElement = document.querySelector(".article");
 
-const imagenElement = document.createElement("img");
-imagenElement.src = tarjeta.image;
-imagenElement.width = "410";
-imagenElement.height = "410";
-
-const tituloElement = document.createElement("h2");
-tituloElement.textContent = tarjeta.name;
-
-const fechaElement = document.createElement("p");
-fechaElement.textContent = "Date: " + tarjeta.date;
-
-const lugarElement = document.createElement("p");
-lugarElement.textContent = "Location: " + tarjeta.place;
-
-const descripcionElement = document.createElement("p");
-descripcionElement.textContent = tarjeta.description;
-
-const precioElement = document.createElement("p");
-precioElement.textContent = "Price: $" + tarjeta.price;
-
-
-
-// Agregar los elementos creados a la tarjeta
-tarjetaElement.appendChild(imagenElement);
-tarjetaElement.appendChild(tituloElement);
-tarjetaElement.appendChild(fechaElement);
-tarjetaElement.appendChild(lugarElement);
-tarjetaElement.appendChild(descripcionElement);
-tarjetaElement.appendChild(precioElement); 
-
-
-tarjetaElement.classList.add("box","d-flex", "justify-content-center", "border", "border-dark-subtle");
-
-imagenElement.classList.add("box","d-flex", "justify-content-center","align-items-center", "flex-shrink-0")
-
-tituloElement.classList.add()
-fechaElement.classList.add()
-lugarElement.classList.add()
-descripcionElement.classList.add()
-precioElement.classList.add()  */
-
-////////////////////////////////////////////////////////////////////////////
-//Prueba 2
-
-/* const tarjetaElement = document.querySelector(".article");
-
-const imagenElement = document.createElement("img");
-imagenElement.src = tarjeta.image;
-imagenElement.width = "410";
-imagenElement.height = "410";
-
-const tituloElement = document.createElement("h2");
-tituloElement.textContent = tarjeta.name;
-tituloElement.classList.add("box","d-flex", "justify-content-center","flex-grow-1", "ms-3", "border", "border-dark-subtle","box2");
-
-const contenedorElement = document.createElement("div");
-contenedorElement.classList.add("flex-grow-1", "ms-3");
-
-const fechaElement = document.createElement("p");
-fechaElement.textContent = "Date: " + tarjeta.date;
-fechaElement.classList.add("box3", "mb-0");
-
-const lugarElement = document.createElement("p");
-lugarElement.textContent = "Location: " + tarjeta.place;
-lugarElement.classList.add("box3", "mb-0");
-
-const descripcionElement = document.createElement("p");
-descripcionElement.textContent = tarjeta.description;
-descripcionElement.classList.add("box3", "mb-0");
-
-const precioElement = document.createElement("p");
-precioElement.textContent = "Price: $" + tarjeta.price;
-precioElement.classList.add("box3", "mb-0");
-
-// Agregar los elementos creados a la tarjeta
-tarjetaElement.appendChild(imagenElement);
-contenedorElement.appendChild(fechaElement);
-contenedorElement.appendChild(lugarElement);
-contenedorElement.appendChild(descripcionElement);
-contenedorElement.appendChild(precioElement);
-
-tarjetaElement.appendChild(tituloElement);
-tarjetaElement.appendChild(contenedorElement); */
-
-///////////////////Prueba 3/////////////////////////
-
-
-
-
+//Creación de los elementos la tarjeta
 const tarjetaElement = document.querySelector(".article");
-tarjetaElement.classList.add("box", "d-flex", "justify-content-center", "border", "border-dark-subtle");
+tarjetaElement.classList.add("box", "d-flex", "justify-content-center", "border", "border-dark-subtle","rounded");
 
 const contenedorElement = document.createElement("div");
 contenedorElement.classList.add("d-flex", "align-items-center");
 
 const imagenElement = document.createElement("img");
-imagenElement.classList.add("foto","flex-shrink-0");
+imagenElement.classList.add("foto","flex-shrink-0","rounded-start");
 imagenElement.src = tarjeta.image;
 imagenElement.width = "470";
 imagenElement.height = "410";
 imagenElement.alt = tarjeta.name;
 
 const contenidoElement = document.createElement("div");
-contenidoElement.classList.add("flex-grow-1", "ms-1", "border", "border-dark-subtle");
+contenidoElement.classList.add("flex-grow-1", "ms-1", "border", "border-dark-subtle","rounded-end");
 
 const tituloElement = document.createElement("h2");
 tituloElement.classList.add("box2");
