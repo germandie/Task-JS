@@ -197,9 +197,6 @@ let currentDate = new Date(datos.currentDate)
 
 
 
-
-
-
 let tablaCategorias = document.getElementById("tabla-categorias");
 
 let categorias = [];
@@ -238,6 +235,9 @@ categorias.forEach(categoria => {
   // Agregar la fila a la tabla
   tablaCategorias.appendChild(fila);
 });
+
+
+
 
 
 
@@ -394,7 +394,7 @@ Object.keys(attendanceByCategory).forEach(categoria => {
   const totalCapacity = pastEvents
     .filter(event => event.category === categoria)
     .reduce((total, event) => total + event.capacity, 0);
-  const percentageAttendance = ((totalAttendance / (numEvents * totalCapacity)) * 100).toFixed(2);
+  const percentageAttendance = ((totalAttendance / ( totalCapacity)) * 100).toFixed(2);
 
   // Celda para el porcentaje de asistencia de la categoría
   let celdaAsistencia = document.createElement("td");

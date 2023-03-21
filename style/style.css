@@ -133,6 +133,7 @@ th{
 td{
     border: 1px solid black;
     padding: 1px 4px;
+    text-align: center;
 
 }
 
@@ -141,6 +142,11 @@ td{
     justify-content: center;
     margin:0px 15px;
 }
+
+.tabla-2, .tabla-3{
+    width: 56.25rem;
+}
+
 
 
 /*Media queries*/
