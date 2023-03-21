@@ -7,64 +7,57 @@ datos.events.sort((a, b) => b.assistance / b.capacity - a.assistance / a.capacit
 // Obtener el elemento de la tabla donde se agregarán las celdas
 const tableBody = document.querySelector('tbody#max-min-values');
 
-const highestAttendanceTable = document.querySelector('#highest-attendance');
-
 
 
 // Crear una celda dinámicamente para cada evento
 datos.events.forEach((event,index) => {
+  if (event.assistance !== undefined) {
   const row = document.createElement('tr');
   const percentage = ((event.assistance / event.capacity) * 100).toFixed(1);
   
   const nameCell = document.createElement('td');
   row.id = "fila" + index;
-  nameCell.textContent = `${event.name} (${percentage}%)`; // concatenar el porcentaje con el nombre del evento
+  nameCell.textContent = `${event.name} (${percentage}%)`; 
 
   row.appendChild(nameCell);
-  //highestAttendanceTable.appendChild(row)
+ 
   tableBody.appendChild(row)
-
-});
-
-
-
-//Events with the lowest percentage of attendance
-datos.events.sort((a, b) => a.assistance / a.capacity - b.assistance / b.capacity);
-
-// Obtener el elemento de la tabla donde se agregarán las celdas
-const tBody = document.querySelector('tbody');
-const lowestAttendanceTable = document.querySelector('#lowest-attendance');
-
-// Crear una celda dinámicamente para cada evento
-datos.events.forEach((event,index) => {
-  const percentage = ((event.assistance / event.capacity) * 100).toFixed(1);
-  const row = document.querySelector('tr#fila' + index);
-  row.innerHTML += `<td>${event.name} (${percentage}% </td> `
-  
-  
-  
-  
-});
-
-
-
-//Evento con mayor capacidad
-
-var mayorEvento = document.getElementById("mayor-evento");
-
-const eventoConMayorCapacidad = datos.events.reduce((acc, event) => {
-  if (event.capacity > acc.capacity) {
-    return event;
-  } else {
-    return acc;
   }
 });
 
-console.log(eventoConMayorCapacidad);
 
-//const row = document.querySelector('tr#fila1');
 
-mayorEvento = eventoConMayorCapacidad.name + " (" + eventoConMayorCapacidad.capacity + " people)";
+//Eventos lowest percentage of attendance
+datos.events.sort((a, b) => a.assistance / a.capacity - b.assistance / b.capacity);
+
+
+
+// Crear una celda dinámicamente para cada evento
+datos.events.forEach((event,index) => {
+  if (event.assistance !== undefined) {
+  const percentage = ((event.assistance / event.capacity) * 100).toFixed(1);
+  const row = document.querySelector('tr#fila' + index);
+  row.innerHTML += `<td>${event.name} (${percentage}%)</td> `
+  
+  
+  }
+  
+});
+
+
+
+
+// Ordenar los eventos por capacidad
+datos.events.sort((a, b) => b.capacity - a.capacity);
+
+datos.events.slice(0, 18).forEach((event, index) => {
+
+const row = document.querySelector('tr#fila' + index);
+
+row.innerHTML += `<td>${event.name} (${event.capacity} peoples)</td> `
+  
+});
+
 
 /////////////////////////////////////////////////////////////////
 //Upcoming events statistics by category
@@ -88,11 +81,9 @@ let currentDate = new Date(datos.currentDate)
   } 
 
 
-
-
 let tablaCategorias = document.getElementById("tabla-categorias");
 
-// Paso 1: Calcular la asistencia por categoría
+// Calcular la asistencia por categoría
 const estimateByCategory = {};
 upcomingEvents.forEach(event => {
   const category = event.category;
@@ -107,7 +98,7 @@ upcomingEvents.forEach(event => {
   }
 });
 
-// Paso 2: Crear las filas de la tabla para cada categoría y sus ganancias y porcentaje de asistencia
+// Crear las filas de la tabla para cada categoría y sus ganancias y porcentaje de asistencia
 Object.keys(estimateByCategory).forEach(categoria => {
   let fila = document.createElement("tr");
 
@@ -153,117 +144,9 @@ Object.keys(estimateByCategory).forEach(categoria => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /////////////////////////////////////////////////////////////////
 //Past events statistics by category
 
-/* let tablaPast = document.getElementById("tabla-past");
-
-
-datos.events.forEach(event => {
-  if (!categorias.includes(event.category)) {
-    categorias.push(event.category);
-  }
-});
-
-// Crear las filas de la tabla para cada categoría y sus ganancias
-categorias.forEach(categoria => {
-  let fila = document.createElement("tr");
-
-  // Celda para la categoría
-  let celdaCategoria = document.createElement("td");
-  celdaCategoria.innerHTML = categoria;
-  fila.appendChild(celdaCategoria);
-
-  // Calcular las ganancias de la categoría
-  let ganancias = 0;
-  pastEvents.forEach(event => {
-    if (event.category === categoria) {
-      ganancias += event.price * event.assistance;
-    }
-  });
-
-  // Celda para las ganancias
-  
- 
- 
-  let celdaGanancias = document.createElement("td");
-  celdaGanancias.innerHTML = `$${ganancias}`;
-  fila.appendChild(celdaGanancias);
-
-  // Agregar la fila a la tabla
-  tablaPast.appendChild(fila);
-
-
-  
-}); */
-
-
-
-
-//Porcentaje de asistencia Past Events
 
 
 
@@ -309,8 +192,7 @@ Object.keys(attendanceByCategory).forEach(categoria => {
   
   
   
-  
-  // Calcular el porcentaje de asistencia de la categoría
+  //Porcentaje de asistencia Past Events
   const { totalAttendance, numEvents } = attendanceByCategory[categoria];
   const totalCapacity = pastEvents
     .filter(event => event.category === categoria)
@@ -325,9 +207,6 @@ Object.keys(attendanceByCategory).forEach(categoria => {
   // Agregar la fila a la tabla
   tablaPast.appendChild(fila);
 });
-
-
-
 
 }
 
